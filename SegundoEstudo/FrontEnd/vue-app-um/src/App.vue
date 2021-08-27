@@ -1,11 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
+  <div>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <input type="text" ref="name" />
+    <button @click="handleClick">testar</button>
+  </div>
 </template>
 
 <script>
 export default {
   name: "App",
   components: {},
+  data() {
+    return {};
+  },
+  methods: {
+    handleClick() {
+      console.log(this.$refs.name);
+      this.$refs.name.classList.add("active");
+      this.$refs.name.focus();
+    },
+  },
 };
 </script>
 
